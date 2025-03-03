@@ -15,7 +15,7 @@ import * as recipeService from '../src/services/recipeService';
 //COMPONENTS
 import RecipeCard from './components/RecipeCard/RecipeCard';
 import RecipeList from './components/RecipeList/RecipeList';
-import RecipeForm from './components/Recipe/RecipeForm';
+import RecipeForm from './components/RecipeForm/RecipeForm';
 
 
 
