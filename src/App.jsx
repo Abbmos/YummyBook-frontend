@@ -5,6 +5,7 @@ import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
 import SignupForm from './components/SignupForm/SignupForm';
 import SigninForm from './components/SigninForm/SigninForm';
+
 //
 import './App.css'
 
@@ -14,6 +15,7 @@ import * as recipeService from '../src/services/recipeService';
 //COMPONENTS
 import RecipeCard from './components/RecipeCard/RecipeCard';
 import RecipeList from './components/RecipeList/RecipeList';
+import RecipeForm from './components/Recipe/RecipeForm';
 
 
 
@@ -46,6 +48,16 @@ const App = () => {
     setUser(null);
   };
 
+
+  const handleAddRecipe = async (recipeFormData) => {
+    const newRecipe = await recipeService.create(recipeFormData)
+    const newRecipeList = [ newRecipe, ...recipes ];
+
+    setRecipes(newRecipeList)
+    navigate('/recipes');
+  };
+
+
   return (
     <>
       <AuthedUserContext.Provider value={user}>
@@ -61,6 +73,7 @@ const App = () => {
               
               <Route path="/" element={<Dashboard user={user} />} />
               <Route path="/recipes" element={<RecipeList recipes={recipes}/>} />
+              <Route path="/recipes/new" element={<RecipeForm handleAddRecipe={handleAddRecipe} />} />
             </>
           ) : (
             <>
