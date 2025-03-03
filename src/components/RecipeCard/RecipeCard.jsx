@@ -1,47 +1,50 @@
 import React from "react";
-console.log("inside card");
+import "./RecipeCard.css";
 
 const RecipeCard = ({ recipe }) => {
-
-
-
   return (
-
-
-    <div className="w-full max-w-md bg-white shadow-lg rounded-2xl overflow-hidden border border-gray-200">
+    <article className="recipe-card">
       {recipe.imageUrl && (
-        <img
-          src={recipe.imageUrl}
-          alt={recipe.name}
-          className="w-full h-48 object-cover"
+        <img 
+          src={recipe.imageUrl} 
+          alt={recipe.title} 
+          className="recipe-image"
         />
       )}
-      <div className="p-4">
-        <h2 className="text-xl font-bold text-gray-900">{recipe.title}</h2>
-        <p className="text-sm text-gray-600">{recipe.description}</p>
-
-        <div className="flex items-center justify-between mt-3 text-sm text-gray-500">
-          <div className="flex items-center gap-1">
-            <span>⏳</span>
-            <span>{recipe.time} mins</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <span>👤</span>
-            <span>{recipe.author?.username || "Unknown"}</span>
-          </div>
+      
+      <div className="card-body">
+        <div className="recipe-meta">
+          <h2 className="recipe-title">{recipe.title}</h2>
+          <span className="time-badge">
+            ⏳ {recipe.time} mins
+          </span>
         </div>
 
-        <p className="mt-3 text-gray-700">
-          <span className="font-semibold">Ingredients:</span> {recipe.ingredients}
-        </p>
+        <p className="recipe-description">{recipe.description}</p>
 
-        <p className="mt-2 text-gray-700">
-          <span className="font-semibold">Instructions:</span> {recipe.instructions}
-        </p>
+        <div className="ingredients-section">
+          <h3 className="section-title">🍴 Ingredients</h3>
+          <ul className="ingredients-list">
+            {recipe.ingredients.split(',').map((ingredient, index) => (
+              <li key={index}>{ingredient.trim()}</li>
+            ))}
+          </ul>
+        </div>
 
-        <button className="mt-4 w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">View Recipe</button>
+        <button className="view-button">
+          View Full Recipe
+        </button>
+
+        <div className="recipe-footer">
+          <div className="author-info">
+            👨🍳 {recipe.author?.username || "Anonymous Chef"}
+          </div>
+          <div className="rating-info">
+            ⭐ {recipe.rating || 'Not rated'}
+          </div>
+        </div>
       </div>
-    </div>
+    </article>
   );
 };
 
