@@ -5,6 +5,7 @@ import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
 import SignupForm from './components/SignupForm/SignupForm';
 import SigninForm from './components/SigninForm/SigninForm';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import * as authService from '../src/services/authService'; // import the authservice
 
 export const AuthedUserContext = createContext(null);
