@@ -14,7 +14,7 @@ const RecipeDetails = (props) => {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        
+
         const recipeData = await recipeService.show(recipeId);
         setRecipe(recipeData);
       } catch (error) {
@@ -37,21 +37,23 @@ const RecipeDetails = (props) => {
     }));
   };
 
- 
+
 
   const handleDeleteComment = async (commentId) => {
-    await recipeService.destroyComment(recipeId, commentId);
+    await recipeService.deleteComment(recipeId, commentId);
     setRecipe(prev => ({
       ...prev,
       comments: prev.comments.filter(comment => comment._id !== commentId)
     }));
   };
 
+
+
   if (!recipe) return <main className="recipe-details loading">Loading...</main>;
 
   return (
     <article className="recipe-details">
-        
+
       <button className="back-button" onClick={() => navigate(-1)}>
         ← Back to Recipes
       </button>
@@ -66,7 +68,7 @@ const RecipeDetails = (props) => {
             </span>
           </div>
         </div>
-        
+
         {recipe.author._id === user?._id && (
           <div className="recipe-actions">
             <button onClick={() => navigate(`/recipes/${recipeId}/edit`)}>
@@ -78,9 +80,9 @@ const RecipeDetails = (props) => {
       </header>
 
       {recipe.imageUrl && (
-        <img 
-          src={recipe.imageUrl} 
-          alt={recipe.title} 
+        <img
+          src={recipe.imageUrl}
+          alt={recipe.title}
           className="details-image"
         />
       )}
@@ -90,7 +92,7 @@ const RecipeDetails = (props) => {
           ⏳ {recipe.time} mins
         </span>
         <div className="rating-info">
-          ⭐ {recipe.rating || 'Not rated'} 
+          ⭐ {recipe.rating || 'Not rated'}
           <span className="text-muted"> ({recipe.comments?.length || 0} comments)</span>
         </div>
       </div>
@@ -116,11 +118,10 @@ const RecipeDetails = (props) => {
           </ol>
         </div>
       </div>
-
       <section className="comments-section">
         <h2 className="section-title">💬 Comments ({recipe.comments.length})</h2>
         <CommentForm handleAddComment={handleAddComment} />
-        
+
         {!recipe.comments.length ? (
           <p className="no-comments">No comments yet. Be the first to share your thoughts!</p>
         ) : (
@@ -134,16 +135,26 @@ const RecipeDetails = (props) => {
                   </span>
                 </div>
                 {comment.author._id === user?._id && (
-                  <button 
-                    className="delete-comment"
-                    onClick={() => handleDeleteComment(comment._id)}
-                  >
-                    Delete
-                  </button>
+                 
+
+                    <button
+                      className="delete-comment"
+                      onClick={() => handleDeleteComment(comment._id)}
+                    >
+                      Delete
+                    </button>
+
+
+                
                 )}
               </header>
+              {comment.rating && (
+                <div className="comment-rating">
+                  ⭐
+                  <span>{comment.rating}/5</span>
+                </div>
+              )}
               <p className="comment-text">{comment.text}</p>
-              
             </article>
           ))
         )}
