@@ -56,7 +56,7 @@ const RecipeForm = (props) => {
             type="text"
             name="description"
             id="text-input"
-            value={formData.text}
+            value={formData.description}
             onChange={handleChange}
           />
            <label htmlFor="text-input">Instructions</label>
@@ -65,7 +65,7 @@ const RecipeForm = (props) => {
             type="text"
             name="instructions"
             id="text-input"
-            value={formData.text}
+            value={formData.instructions}
             onChange={handleChange}
           />
             <label htmlFor="text-input">Ingredients</label>
@@ -74,7 +74,7 @@ const RecipeForm = (props) => {
             type="text"
             name="ingredients"
             id="text-input"
-            value={formData.text}
+            value={formData.ingredients}
             onChange={handleChange}
           />
           <label htmlFor="category-input">Category</label>

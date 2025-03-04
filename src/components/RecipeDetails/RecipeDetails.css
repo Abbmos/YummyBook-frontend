@@ -52,6 +52,7 @@
     list-style-type: decimal;
     padding-left: 1.5rem;
     line-height: 1.6;
+    color: tomato;
   }
   
   .instructions-list li {
@@ -67,7 +68,7 @@
   }
   
   .nutrition-info {
-    background: #f8f9fa;
+    background: #121212;
     padding: 1.5rem;
     border-radius: 10px;
     margin-top: 2rem;
