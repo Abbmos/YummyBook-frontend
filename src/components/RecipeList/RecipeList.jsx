@@ -1,15 +1,14 @@
-// src/components/RecipeList/RecipeList.jsx
 import { Link } from "react-router-dom";
 import RecipeCard from "../RecipeCard/RecipeCard";
+import './RecipeList.css';
+
 const RecipeList = ({ recipes }) => {
-
-  
-    return (
-    <main className="p-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  return (
+    <main className="recipe-list">
       {recipes.map((recipe) => (
-     
-<RecipeCard recipe={recipe}/>
-
+        <div className="recipe-card-wrapper" key={recipe._id}>
+          <RecipeCard recipe={recipe} />
+        </div>
       ))}
     </main>
   );
