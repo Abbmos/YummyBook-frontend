@@ -16,6 +16,7 @@ import * as recipeService from '../src/services/recipeService';
 import RecipeCard from './components/RecipeCard/RecipeCard';
 import RecipeList from './components/RecipeList/RecipeList';
 import RecipeForm from './components/RecipeForm/RecipeForm';
+import RecipeDetails from './components/RecipeDetails/RecipeDetails';
 
 
 
@@ -37,8 +38,10 @@ const App = () => {
 
     if (user) fetchAllRecipes()
 
+      
 
-  }, [user])
+
+  }, [user]);
 
 
 
@@ -57,6 +60,11 @@ const App = () => {
     navigate('/recipes');
   };
 
+  const handleDeleteRecipe = async (recipeId) => {
+    const deletedRecipe = await recipeService.deleteRecipe(recipeId);
+    setRecipes(recipes.filter(recipe => recipe._id !== deletedRecipe._id));
+    navigate('/recipes');
+  };
 
   return (
     <>
@@ -74,6 +82,8 @@ const App = () => {
               <Route path="/" element={<Dashboard user={user} />} />
               <Route path="/recipes" element={<RecipeList recipes={recipes}/>} />
               <Route path="/recipes/new" element={<RecipeForm handleAddRecipe={handleAddRecipe} />} />
+              <Route path="recipes/:recipeId" element={<RecipeDetails recipes={recipes} handleDeleteRecipe={handleDeleteRecipe} />} />
+              <Route path="recipes/:recipeId/edit" element={<RecipeForm handleAddRecipe={handleAddRecipe}/>} />
             </>
           ) : (
             <>
