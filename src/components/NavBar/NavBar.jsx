@@ -1,34 +1,61 @@
 import { Link } from 'react-router-dom';
-import { AuthedUserContext } from '../../App';
 import { useContext } from 'react';
-import styles from './NavBar.module.css'
-
+import { AuthedUserContext } from '../../App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = ({ handleSignout }) => {
   const user = useContext(AuthedUserContext);
+
   return (
-    <>
-    { user ? (
-      <nav className={styles.container}>
-        <ul>
-        <li>Welcome, {user.username}</li>
-          <Link to="/"><li>Home</li></Link>
-          <Link to="/"><li>Recipe</li></Link>
-          <Link to="/recipes/new"><li>New Recipe</li></Link>
-          <Link to="" onClick={handleSignout}><li>Sign Out</li></Link>
-        </ul>
-      </nav>
-    ) : (
-      <nav className={styles.container}>
-        <ul>
-          <Link to="/signin"><li>Sign In</li></Link>
-          <Link to="/signup"><li>Sign Up</li></Link>
-        </ul>
-      </nav>
-    )}
-  </>
-)
-}
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">
+          <img src="../src/images/Logo.png" alt="logo" width="40" height="40" style={{ marginTop: '-3px' }} />
+          Recipe App
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            {user ? (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/">Home</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/">Recipe</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/recipes/new">New Recipe</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="" onClick={handleSignout}>Sign Out</Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signin">Sign In</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signup">Sign Up</Link>
+                </li>
+              </>
+            )}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
 export default NavBar;
-
-
