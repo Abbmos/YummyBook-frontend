@@ -1,0 +1,33 @@
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+  }
+  
+  .recipe-card-wrapper {
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 400px;
+    min-width: 280px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .recipe-list {
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+    
+    .recipe-card-wrapper {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .recipe-card-wrapper {
+      flex-basis: 45%;
+      max-width: 45%;
+    }
+  }

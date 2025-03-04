@@ -11,7 +11,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css'
 
 //services
-import * as authService from '../src/services/authService'; // import the authservice
+import * as authService from '../src/services/authService'; 
 import * as recipeService from '../src/services/recipeService';
 //COMPONENTS
 import RecipeCard from './components/RecipeCard/RecipeCard';
@@ -85,7 +85,7 @@ const App = () => {
 
 
             <>
-              {/* <Route path ="/recipes" element={<RecipeCard recipe={recipes[0]} />} />*/}
+              
 
 
               

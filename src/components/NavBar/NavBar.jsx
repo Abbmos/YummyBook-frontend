@@ -32,7 +32,7 @@ const NavBar = ({ handleSignout }) => {
                   <Link className="nav-link" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">Recipe</Link>
+                  <Link className="nav-link" to="/recipes">Recipes</Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/recipes/new">New Recipe</Link>
