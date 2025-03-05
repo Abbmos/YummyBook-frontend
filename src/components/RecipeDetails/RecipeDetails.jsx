@@ -91,7 +91,7 @@ const RecipeDetails = (props) => {
           ⏳ {recipe.time} mins
         </span>
         <div className="rating-info">
-          ⭐ {recipe.rating || 'Not rated'}
+         
           <span className="text-muted"> ({recipe.comments?.length || 0} comments)</span>
         </div>
       </div>
@@ -124,6 +124,7 @@ const RecipeDetails = (props) => {
         {!recipe.comments.length ? (
           <p className="no-comments">No comments yet. Be the first to share your thoughts!</p>
         ) : (
+         <div className='comments-container'>{
           recipe.comments.map(comment => (
             <article key={comment._id} className="comment-card">
               <header className="comment-header">
@@ -156,6 +157,9 @@ const RecipeDetails = (props) => {
               <p className="comment-text">{comment.text}</p>
             </article>
           ))
+
+        }</div>
+
         )}
       </section>
     </article>

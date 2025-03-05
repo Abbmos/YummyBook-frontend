@@ -1,6 +1,6 @@
 
 .recipe-details {
-    background: #ffffff;
+    background: rgb(245, 245, 220);
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -105,16 +105,7 @@
     }
   }
 
-  .comment-card {
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 2rem auto;
-    max-width: 1200px;
-    padding: 2rem;
-    color: #2d2d2d;
-  }
+ 
 
 .comments-section {
   margin-top: 3rem;
@@ -127,9 +118,23 @@
   border-radius: 12px;
   padding: 1.5rem;
   margin: 1.5rem 0;
-  box-shadow: 0 2px 4px rgba(7, 26, 31, 0.1);
+  /* box-shadow: 0 2px 4px rgba(7, 26, 31, 0.1); */
   border: 1px solid #dfd3bd;
+  width: 100%;
+  
 }
+
+/* .comment-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 2rem;
+  color: #2d2d2d;
+} */
+
 
 .comment-header {
   display: flex;
@@ -153,11 +158,12 @@
 }
 
 .comment-text {
-  color: #2d3f36;
+  color: black;
   line-height: 1.6;
   margin: 1rem 0;
   padding-left: 1.5rem;
   border-left: 3px solid #eb7324;
+  opacity: 1;
 }
 
 .delete-comment {
@@ -229,4 +235,11 @@ button {
   cursor: pointer;
   transition: all 0.2s ease;
   margin-top: 1.5rem;
+}
+
+.comments-container{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-direction: column;
 }

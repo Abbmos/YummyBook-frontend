@@ -32,14 +32,13 @@ const RecipeCard = ({ recipe }) => {
           </ul>
         </div>
 
-    <Link to={`/recipes/${recipe._id}` }> Show Full Details</Link>
+        <Link to={`/recipes/${recipe._id}`}>
+  <button>Show Full Details</button>
+</Link>
 
         <div className="recipe-footer">
           <div className="author-info">
             👨🍳 {recipe.author?.username || "Anonymous Chef"}
-          </div>
-          <div className="rating-info">
-            ⭐ {recipe.rating || 'Not rated'}
           </div>
         </div>
       </div>

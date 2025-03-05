@@ -23,8 +23,8 @@ const Dashboard = () => {
         </div>
         <div className={styles.featureCard}>
           <div className={styles.icon}>🥗</div>
-          <h3>Recipe Generation!</h3>
-          <p>Input ingredients you have, and get personalized recipes tailored just for you.</p>
+          <h3>Get Inspired!</h3>
+          <p>Discover new flavors and creative dishes to try in your kitchen. </p>
         </div>
       </section>
     </main>
