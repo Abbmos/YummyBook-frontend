@@ -1,12 +1,13 @@
 /* SigninForm.module.css */
 .container {
     display: flex;
-    height: 100vh;
+    height: 100%;
+
   }
   
   .leftPanel {
     width: 40%;
-    background-color: #eb7324;
+    background-color: #fff9dd;
     color: black;
     display: flex;
     flex-direction: column;
@@ -19,14 +20,15 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
+    
   }
   
-  .createAccountButton {
-    padding: 10px 20px;
-    border: 4px solid white;
+  .createAccountBtn {
+    padding: 10px 40px;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 20px;
     background: white;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 16px;
     cursor: pointer;
   }
@@ -41,14 +43,17 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../assets/images/backImg.png);
+    background-position: center;
+    background-size: cover;
   }
   
-  .signInTitle {
+  /* .signInTitle {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #2a5d72;
-  }
+    color:#c40621;
+  } */
   
   .inputGroup {
     display: flex;
@@ -61,7 +66,7 @@
   .inputGroup label {
     font-weight: bold;
     margin-bottom: 5px;
-    color: #2a5d72;
+    color: #c40621;
   }
   
   .inputGroup input {
@@ -71,7 +76,7 @@
     font-size: 16px;
   }
   
-  .signInButton {
+  .signinBtn {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
@@ -82,8 +87,30 @@
     margin-top: 15px;
   }
   
-  .signInButton:hover {
+  .signinBtn:hover {
     background-color: #1f4b5a;
   }
   
-  
+  .bgImg{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+
+
+  h1{
+font-size: 28px;
+font-weight: 600px;
+color:#fff9dd;
+
+
+  }
+
+
+  #singinform {
+    background-color: #734e54;
+    color: aqua;
+    display: flex;
+    align-items: center;
+
+  }
