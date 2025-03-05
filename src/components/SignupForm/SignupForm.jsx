@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import * as authService from '../../services/authService';
 import styles from './SignupForm.module.css';
+import Logo from '../../assets/images/Logo1.png';
 
 const SignupForm = (props) => {
   const navigate = useNavigate();
@@ -41,6 +42,7 @@ const SignupForm = (props) => {
       
       <div className={styles.leftPanel}>
         <h2>Join Us</h2>
+        <img className={styles.bgImg} src={Logo} alt="Logo1" />
         <p>Already have an account?</p>
         <Link to="/signin">
           <button className={styles.signInButton}>Sign In</button>
@@ -51,7 +53,7 @@ const SignupForm = (props) => {
       <div className={styles.rightPanel}>
         <h1 className={styles.signupTitle}>Sign Up</h1>
         <p className={styles.errorMessage}>{message}</p>
-        <form autoComplete="off" onSubmit={handleSubmit}>
+        <form id={styles.singupform}autoComplete="off" onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>
             <label htmlFor="username">Username:</label>
             <input
