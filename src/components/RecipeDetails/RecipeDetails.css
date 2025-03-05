@@ -217,3 +217,16 @@
     font-size: 0.95rem;
   }
 }
+
+button {
+  background-color: #eb7324;
+  color: #fdfbe6;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1.5rem;
+}

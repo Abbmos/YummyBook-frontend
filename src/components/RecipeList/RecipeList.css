@@ -9,7 +9,8 @@
   .recipe-card-wrapper {
     flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
     max-width: 400px;
-    min-width: 280px;
+    min-width: 20%;
+    min-height: 60%;
   }
   
   /* Responsive Design */
@@ -31,3 +32,23 @@
       max-width: 45%;
     }
   }
+  /* .recipe-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    min-width: 20%;
+  } */
+
+  /* .recipe-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    min-width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+
+  } */

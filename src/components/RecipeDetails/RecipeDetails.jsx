@@ -55,7 +55,7 @@ const RecipeDetails = (props) => {
     //put max width or article 60%
     <article className="recipe-details" style={{ maxWidth: '800px', margin: '0 auto' }}>
 
-      <button className="back-button" onClick={() => navigate(-1)}>
+      <button className="back-button" onClick={() => navigate("/recipes")}>
         ← Back to Recipes
       </button>
 
@@ -64,9 +64,7 @@ const RecipeDetails = (props) => {
           <h1 className="details-title">{recipe.title}</h1>
           <div className="author-info">
             👨🍳 By {recipe.author?.username || "Anonymous Chef"}
-            <span className="text-muted">
-              {new Date(recipe.createdAt).toLocaleDateString()}
-            </span>
+            
           </div>
         </div>
 

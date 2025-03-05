@@ -4,6 +4,7 @@
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(7, 26, 31, 0.1);
     margin: 2rem 0;
+    justify-content: center;
   }
   
   .comment-form label {
@@ -30,7 +31,14 @@
     outline: none;
     border-color: #eb7324;
   }
-  
+  .comments-section{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+  }
   .rating-input-container {
     display: flex;
     align-items: center;
