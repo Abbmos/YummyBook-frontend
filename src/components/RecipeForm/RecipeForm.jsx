@@ -42,7 +42,7 @@ const RecipeForm = (props) => {
         <h1 className="form-title">{recipeId ? 'Edit Recipe' : 'Create New Recipe'}</h1>
         
         <div className="form-grid">
-          {/* Left Column */}
+          
           <div className="form-column">
             <div className="form-row">
               <label className="form-label" htmlFor="title-input">Title</label>
@@ -73,11 +73,11 @@ const RecipeForm = (props) => {
             
           </div>
 
-          {/* Right Column */}
+         
           <div className="form-column">
             <div className="form-row">
               <label className="form-label" htmlFor="description-input">Description</label>
-              <textarea required name="description" id="description-input" className="form-input form-textarea" value={formData.description} onChange={handleChange} />
+              <textarea name="description" id="description-input" className="form-input form-textarea" value={formData.description} onChange={handleChange} />
             </div>
 
             <div className="form-row">
@@ -87,7 +87,7 @@ const RecipeForm = (props) => {
 
             <div className="form-row">
               <label className="form-label" htmlFor="instructions-input">Instructions</label>
-              <textarea required name="instructions" id="instructions-input" className="form-input form-textarea" value={formData.instructions} onChange={handleChange} placeholder="Enter each step on a new line..." />
+              <textarea name="instructions" id="instructions-input" className="form-input form-textarea" value={formData.instructions} onChange={handleChange} placeholder="Enter each step on a new line..." />
             </div>
 
             <button type="submit" className="form-button">{recipeId ? 'Update Recipe' : 'Create Recipe'}</button>
