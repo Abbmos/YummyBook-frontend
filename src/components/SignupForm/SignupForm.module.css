@@ -1,0 +1,106 @@
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .leftPanel {
+    width: 40%;
+    background-color: #eb7324;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .leftPanel h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .leftPanel p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .signInButton {
+    padding: 10px 20px;
+    border: 4px solid white;
+    border-radius: 20px;
+    background:white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .rightPanel {
+    width: 60%;
+    background-color: #eaf6f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .signupTitle {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2a5d72;
+  }
+  
+
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .inputGroup label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2a5d72;
+  }
+  
+  .inputGroup input {
+    padding: 10px;
+    border: 1px solid #2a5d72;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .signupButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #2a5d72;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .signupButton:hover {
+    background-color: #1f4b5a;
+  }
+  
+  .cancelButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ccc;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .cancelButton:hover {
+    background-color: #bbb;
+  }
