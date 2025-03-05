@@ -79,7 +79,7 @@ align-items: center;
     background-color: #f14b2a;
   }
   
-  /* Responsive Design */
+  
   @media (max-width: 768px) {
     .comment-form {
       padding: 1.5rem;

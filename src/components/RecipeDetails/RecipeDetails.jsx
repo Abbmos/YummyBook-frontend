@@ -52,7 +52,6 @@ const RecipeDetails = (props) => {
   if (!recipe) return <main className="recipe-details loading">Loading...</main>;
 
   return (
-    //put max width or article 60%
     <article className="recipe-details" style={{ maxWidth: '800px', margin: '0 auto' }}>
 
       <button className="back-button" onClick={() => navigate("/recipes")}>
