@@ -1,0 +1,60 @@
+.landingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    background-color: brown;
+    height: 100%;
+  }
+  
+  .welcomeWindow {
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 600px;
+    height: 400px; 
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center; 
+    padding: 40px;
+  }
+  
+  .windowContent {
+    text-align: center; 
+    flex-direction: column;
+  justify-content: center;
+    height: 100%;
+  }
+  
+  .windowContent p {
+    line-height: 1.8; 
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .windowContent h2 {
+    margin-bottom: 40px; 
+    font-size: 24px;
+  }
+  .landingContent {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .logo {
+    width: 150px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+    margin-bottom: 20px; 
+  }
+
+.bgImg{
+  margin-left: auto;
+  margin-right: auto;
+  height: 70vh;
+}

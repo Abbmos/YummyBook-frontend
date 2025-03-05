@@ -1,34 +1,34 @@
 import { Link } from 'react-router-dom';
-import { AuthedUserContext } from '../../App';
 import { useContext } from 'react';
-import styles from './NavBar.module.css'
-
+import { AuthedUserContext } from '../../App';
+import styles from './NavBar.module.css';
+import Logo from '../../assets/images/Logo1.png';
 
 const NavBar = ({ handleSignout }) => {
   const user = useContext(AuthedUserContext);
+
   return (
-    <>
-    { user ? (
-      <nav className={styles.container}>
-        <ul>
-        <li>Welcome, {user.username}</li>
-          <Link to="/"><li>Home</li></Link>
-          <Link to="/"><li>Recipe</li></Link>
-          <Link to="/recipes/new"><li>New Recipe</li></Link>
-          <Link to="" onClick={handleSignout}><li>Sign Out</li></Link>
-        </ul>
-      </nav>
-    ) : (
-      <nav className={styles.container}>
-        <ul>
-          <Link to="/signin"><li>Sign In</li></Link>
-          <Link to="/signup"><li>Sign Up</li></Link>
-        </ul>
-      </nav>
-    )}
-  </>
-)
-}
+    <nav className={styles.container}>
+      <Link to="/">
+        <img className={styles.logo} src={Logo} alt="Logo" />
+      </Link>
+      <ul>
+        {user ? (
+          <>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/recipes">Recipes</Link></li>
+            <li><Link to="/recipes/new">New Recipe</Link></li>
+            <li><Link to="" onClick={handleSignout}>Sign Out</Link></li>
+          </>
+        ) : (
+          <>
+            <li><Link to="/signin">Sign In</Link></li>
+            <li><Link to="/signup">Sign Up</Link></li>
+          </>
+        )}
+      </ul>
+    </nav>
+  );
+};
+
 export default NavBar;
-
-

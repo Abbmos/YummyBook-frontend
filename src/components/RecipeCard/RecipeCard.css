@@ -6,6 +6,8 @@
     margin: 1rem;
     max-width: 400px;
     transition: transform 0.2s ease;
+    min-height: 100%;
+    
   }
   
   .recipe-card:hover {
@@ -32,10 +34,12 @@
   }
   
   .recipe-description {
-    color: #666;
+    color: black;
     font-size: 0.9rem;
     margin-bottom: 1.25rem;
     line-height: 1.4;
+    height: 10%;
+    opacity: none;
   }
   
   .recipe-meta {
@@ -61,6 +65,8 @@
     margin: 1rem 0;
     padding-left: 0;
     list-style: none;
+    max-height: 20%;
+    min-height: 20%;
   }
   
   .ingredients-list li {
@@ -113,4 +119,11 @@
     display: flex;
     align-items: center;
     gap: 0.25rem;
+  }   
+  .ingredients-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 2rem;
   }

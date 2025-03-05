@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import * as authService from '../../services/authService';
+import styles from './SignupForm.module.css';
 
 const SignupForm = (props) => {
   const navigate = useNavigate();
-  const [message, setMessage] = useState(['']);
+  const [message, setMessage] = useState('');
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -16,6 +17,7 @@ const SignupForm = (props) => {
   };
 
   const handleChange = (e) => {
+    updateMessage('');
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -30,54 +32,67 @@ const SignupForm = (props) => {
     }
   };
 
-  const { username, password, passwordConf } = formData;
-
   const isFormInvalid = () => {
-    return !(username && password && password === passwordConf);
+    return !(formData.username && formData.password && formData.password === formData.passwordConf);
   };
 
   return (
-    <main>
-      <h1>Sign Up</h1>
-      <p>{message}</p>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="name"
-            value={username}
-            name="username"
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            name="password"
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="confirm">Confirm Password:</label>
-          <input
-            type="password"
-            id="confirm"
-            value={passwordConf}
-            name="passwordConf"
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <button disabled={isFormInvalid()}>Sign Up</button>
-          <Link to="/">
-            <button>Cancel</button>
-          </Link>
-        </div>
-      </form>
+    <main className={styles.container}>
+      
+      <div className={styles.leftPanel}>
+        <h2>Join Us</h2>
+        <p>Already have an account?</p>
+        <Link to="/signin">
+          <button className={styles.signInButton}>Sign In</button>
+        </Link>
+      </div>
+
+      
+      <div className={styles.rightPanel}>
+        <h1 className={styles.signupTitle}>Sign Up</h1>
+        <p className={styles.errorMessage}>{message}</p>
+        <form autoComplete="off" onSubmit={handleSubmit}>
+          <div className={styles.inputGroup}>
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              autoComplete="off"
+              id="username"
+              value={formData.username}
+              name="username"
+              onChange={handleChange}
+            />
+          </div>
+          <div className={styles.inputGroup}>
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              autoComplete="off"
+              id="password"
+              value={formData.password}
+              name="password"
+              onChange={handleChange}
+            />
+          </div>
+          <div className={styles.inputGroup}>
+            <label htmlFor="passwordConf">Confirm Password:</label>
+            <input
+              type="password"
+              autoComplete="off"
+              id="passwordConf"
+              value={formData.passwordConf}
+              name="passwordConf"
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <button className={styles.signupButton} disabled={isFormInvalid()}>Sign Up</button>
+            <Link to="/">
+              <button className={styles.cancelButton}>Cancel</button>
+            </Link>
+          </div>
+        </form>
+      </div>
     </main>
   );
 };

@@ -1,9 +1,10 @@
 import React from "react";
 import "./RecipeCard.css";
+import { Link } from "react-router-dom";
 
 const RecipeCard = ({ recipe }) => {
   return (
-    <article className="recipe-card">
+    <article className="recipe-card" key={recipe._id}>
       {recipe.imageUrl && (
         <img 
           src={recipe.imageUrl} 
@@ -31,16 +32,13 @@ const RecipeCard = ({ recipe }) => {
           </ul>
         </div>
 
-        <button className="view-button">
-          View Full Recipe
-        </button>
+        <Link to={`/recipes/${recipe._id}`}>
+  <button>Show Full Details</button>
+</Link>
 
         <div className="recipe-footer">
           <div className="author-info">
             👨🍳 {recipe.author?.username || "Anonymous Chef"}
-          </div>
-          <div className="rating-info">
-            ⭐ {recipe.rating || 'Not rated'}
           </div>
         </div>
       </div>

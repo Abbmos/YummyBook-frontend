@@ -1,0 +1,245 @@
+
+.recipe-details {
+    background: rgb(245, 245, 220);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 2rem;
+  }
+  
+  .details-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+  
+  .details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .details-title {
+    font-size: 2.2rem;
+    color: #2d2d2d;
+    margin-bottom: 0.5rem;
+  }
+  
+  .details-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .details-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+    color: #ff7b00;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+  }
+  
+  .instructions-list {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+    color: tomato;
+  }
+  
+  .instructions-list li {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+  
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .nutrition-info {
+    background: #121212;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+  }
+  
+  .back-button {
+    background: none;
+    border: 2px solid #666;
+    color: #666;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 2rem;
+  }
+  
+  .back-button:hover {
+    background: #666;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .details-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .details-image {
+      height: 250px;
+    }
+    
+    .details-title {
+      font-size: 1.8rem;
+    }
+  }
+
+ 
+
+.comments-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #eee;
+}
+
+.comment-card {
+  background: #fdfbe6;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  /* box-shadow: 0 2px 4px rgba(7, 26, 31, 0.1); */
+  border: 1px solid #dfd3bd;
+  width: 100%;
+  
+}
+
+/* .comment-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 2rem;
+  color: #2d2d2d;
+} */
+
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: #0c2326;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.comment-date {
+  color: #816c55;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.comment-text {
+  color: black;
+  line-height: 1.6;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid #eb7324;
+  opacity: 1;
+}
+
+.delete-comment {
+  background: none;
+  border: none;
+  color: #cd1d22;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.delete-comment:hover {
+  color: #f14b2a;
+  text-decoration: underline;
+}
+
+.no-comments {
+  text-align: center;
+  color: #816c55;
+  padding: 2rem;
+  background: #dfd3bd;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.comment-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: #eb7324;
+  font-weight: 600;
+}
+
+.comment-rating svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: #eb7324;
+}
+
+
+@media (max-width: 768px) {
+  .comment-card {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .comment-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .comment-text {
+    padding-left: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+button {
+  background-color: #eb7324;
+  color: #fdfbe6;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1.5rem;
+}
+
+.comments-container{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-direction: column;
+}

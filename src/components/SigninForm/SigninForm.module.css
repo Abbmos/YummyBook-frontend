@@ -1,0 +1,116 @@
+/* SigninForm.module.css */
+.container {
+    display: flex;
+    height: 100%;
+
+  }
+  
+  .leftPanel {
+    width: 40%;
+    background-color: #fff9dd;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .welcomeText {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+  }
+  
+  .createAccountBtn {
+    padding: 10px 40px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    background: white;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  
+  
+  .rightPanel {
+    width: 60%;
+    background-color: #eaf6f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../assets/images/backImg.png);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  /* .signInTitle {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#c40621;
+  } */
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .inputGroup label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #c40621;
+  }
+  
+  .inputGroup input {
+    padding: 10px;
+    border: 1px solid #2a5d72;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .signinBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #2a5d72;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .signinBtn:hover {
+    background-color: #1f4b5a;
+  }
+  
+  .bgImg{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+
+
+  h1{
+font-size: 28px;
+font-weight: 600px;
+color:#fff9dd;
+
+
+  }
+
+
+  #singinform {
+    background-color: #734e54;
+    color: aqua;
+    display: flex;
+    align-items: center;
+
+  }

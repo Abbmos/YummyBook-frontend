@@ -85,11 +85,26 @@ async function update(recipeId, recipeFormData) {
   }
 }
 
+const deleteComment = async (recipeId, commentId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${recipeId}/comments/${commentId}`, {
+      method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
+    });
+    return res.json();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export {
   index,
   show,
   create,
   update,
   deleteRecipe,
-  createComment
+  createComment,
+  deleteComment
 };
