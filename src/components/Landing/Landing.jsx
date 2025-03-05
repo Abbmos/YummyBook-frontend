@@ -16,9 +16,22 @@ const Landing = () => {
         </p>
       </div>
     </div> */}
+    <p>
+    Welcome to YummyBook—your go-to for quick,
+      tasty recipes! Whether you're a novice or a pro,
+      find easy-to-follow instructions and delicious dishes to elevate your cooking.
+    </p>
     <div className="bgImg"> 
       <img className={styles.bgImg} src={Logo} alt="Logo1" />
     </div>
+{/* <div class="paragraph">
+<p>
+      Welcome to YummyBook—your go-to for quick,
+      tasty recipes! Whether you're a novice or a pro,
+      find easy-to-follow instructions and delicious dishes to elevate your cooking.
+        </p>
+</div> */}
+
   </div>
   
 );

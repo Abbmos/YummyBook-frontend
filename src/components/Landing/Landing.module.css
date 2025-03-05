@@ -8,7 +8,7 @@
     height: 100%;
   }
   
-  .welcomeWindow {
+  /* .welcomeWindow {
     position: fixed;
     top: 57%;
     left: 50%;
@@ -22,28 +22,28 @@
     text-align: center; 
     padding: 40px;
   }
-  
-  .windowContent {
+   */
+  /* .windowContent {
     text-align: center; 
     flex-direction: column;
   justify-content: center;
     height: 100%;
-  }
-  
-  .windowContent p {
+  } */
+/*   
+  p {
     line-height: 1.8; 
     margin-top: 10px;
     text-align: center;
-  }
+  }  */
   
-  .windowContent h2 {
+  /* .windowContent h2 {
     margin-bottom: 40px; 
     font-size: 24px;
-  }
-  .landingContent {
+  } */
+  /* .landingContent {
     margin-top: 20px;
     text-align: center;
-  }
+  } */
   
   .logo {
     width: 150px; 
@@ -57,4 +57,8 @@
   margin-left: auto;
   margin-right: auto;
   height: 70vh;
+}
+
+p{
+  font-size: 25px;
 }
